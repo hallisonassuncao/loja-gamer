@@ -1,0 +1,15 @@
+// Interações em JavaScript: busca, login demonstrativo, formulários e navegação.
+"use strict";
+function topo(){window.scrollTo({top:0,left:0,behavior:"smooth"});}
+function mensagem(id,texto,tipo="info"){const el=document.getElementById(id);if(el){el.className=`alert alert-${tipo} mt-3`;el.textContent=texto;}}
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("voltar-topo")?.addEventListener("click",topo);
+ document.querySelectorAll(".comprar").forEach(botao=>botao.addEventListener("click",()=>alert(`Você selecionou ${botao.dataset.produto}. Esta é uma loja demonstrativa, sem checkout real.`)));
+ const busca=document.getElementById("form-busca");busca?.addEventListener("submit",event=>{event.preventDefault();const termo=document.getElementById("busca").value.trim().toLocaleLowerCase("pt-BR");if(!document.getElementById("lista-produtos")){location.href="index.html?busca="+encodeURIComponent(termo)+"#promocoes";return;}filtrar(termo);});
+ function filtrar(termo){let total=0;document.querySelectorAll(".produto").forEach(item=>{const achou=item.dataset.nome.includes(termo);item.classList.toggle("d-none",!achou);if(achou)total++;});const aviso=document.getElementById("resultado-busca");if(aviso){aviso.classList.remove("d-none");aviso.textContent=termo?`${total} produto(s) encontrado(s) para “${termo}”.`:`Exibindo todos os ${total} produtos.`;}document.getElementById("promocoes")?.scrollIntoView({behavior:"smooth"});}
+ const params=new URLSearchParams(location.search);if(params.has("busca")&&document.getElementById("lista-produtos")){const termo=params.get("busca")||"";document.getElementById("busca").value=termo;filtrar(termo.toLocaleLowerCase("pt-BR"));}
+ document.getElementById("newsletter-form")?.addEventListener("submit",event=>{event.preventDefault();const campo=document.getElementById("newsletter-email");if(!campo.checkValidity()){campo.reportValidity();return;}mensagem("newsletter-msg","E-mail validado! Inscrição simulada com sucesso.","success");event.target.reset();});
+ document.getElementById("mostrar-senha")?.addEventListener("change",event=>{document.getElementById("senha").type=event.target.checked?"text":"password";});
+ document.getElementById("login-form")?.addEventListener("submit",event=>{event.preventDefault();const usuario=document.getElementById("usuario"),senha=document.getElementById("senha");if(!usuario.value.trim()||!senha.value){mensagem("login-msg","Preencha usuário e senha.","warning");return;}if(usuario.value.trim().toLowerCase()==="admin"&&senha.value==="123456"){mensagem("login-msg","Login demonstrativo realizado! Redirecionando...","success");setTimeout(()=>location.href="index.html",800);}else{mensagem("login-msg","Acesso negado. Usuário ou senha incorretos.","danger");}});
+ document.getElementById("cadastro-form")?.addEventListener("submit",event=>{event.preventDefault();const form=event.target;if(!form.checkValidity()){form.reportValidity();mensagem("cadastro-msg","Verifique os dados informados.","warning");return;}mensagem("cadastro-msg","Dados validados! Cadastro simulado com sucesso. Nenhuma conta foi armazenada.","success");form.reset();});
+});
