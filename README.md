@@ -49,4 +49,4 @@ loja-gamer-senai/
 
 ## Referência
 
-Material SENAI — *Codificação Front-End: Desenvolvendo a home e o login de um site* 
+Material SENAI — *Codificação Front-End: Desenvolvendo a home e o login de um site*.
