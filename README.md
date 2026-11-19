@@ -1,6 +1,6 @@
 # 🎮 LH Games — Atividade Front-End SENAI
 
-Projeto educacional de loja de eletrônicos e jogos gamer, desenvolvido a partir do ZIP inicial da atividade.
+Projeto educacional de loja de eletrônicos e jogos gamer.
 
 ## Como abrir no VS Code
 
