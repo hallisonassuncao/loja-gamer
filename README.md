@@ -4,10 +4,9 @@ Projeto educacional de loja de eletrônicos e jogos gamer.
 
 ## Como abrir no VS Code
 
-1. Extraia o ZIP final.
-2. No VS Code, escolha **Arquivo > Abrir Pasta** e selecione `loja-gamer-senai`.
-3. Abra `index.html` no navegador (ou use a extensão Live Server).
-4. Clique em **Login** no menu para testar `login.html`.
+1. No VS Code, escolha **Arquivo > Abrir Pasta** e selecione `loja-gamer-senai`.
+2. Abra `index.html` no navegador (ou use a extensão Live Server).
+3. Clique em **Login** no menu para testar `login.html`.
 
 **Atenção:** Bootstrap e jQuery são carregados por CDN; mantenha conexão com a internet para os componentes e efeitos funcionarem.
 
