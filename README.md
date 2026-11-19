@@ -1,4 +1,4 @@
-# 🎮 LH Games — Atividade Front-End SENAI
+# 🎮 LH Games — Front-End 
 
 Projeto educacional de loja de eletrônicos e jogos gamer.
 
