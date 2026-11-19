@@ -39,13 +39,6 @@ loja-gamer-senai/
 └── README.md
 ```
 
-## Publicação no GitHub
-
-1. Crie um repositório **público** no GitHub.
-2. Envie todos os arquivos e pastas, mantendo a estrutura.
-3. Em **Settings > Pages**, configure **Deploy from a branch**, `main`, `/ (root)` e salve.
-4. Aguarde a publicação e teste o endereço exibido no GitHub Pages.
-5. Cole no AVA o link do repositório ou do site publicado, conforme orientação do tutor.
 
 ## Referência
 
