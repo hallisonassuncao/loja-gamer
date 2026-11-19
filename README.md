@@ -1,6 +1,6 @@
 # 🎮 LH Games — Atividade Front-End SENAI
 
-Projeto educacional de loja de eletrônicos e jogos gamer, desenvolvido a partir do ZIP inicial da atividade e orientações do PDF **CodFront_Ativ_HomeLogin**.
+Projeto educacional de loja de eletrônicos e jogos gamer, desenvolvido a partir do ZIP inicial da atividade.
 
 ## Como abrir no VS Code
 
@@ -50,4 +50,4 @@ loja-gamer-senai/
 
 ## Referência
 
-Material SENAI — *Codificação Front-End: Desenvolvendo a home e o login de um site* (PDF fornecido na atividade).
+Material SENAI — *Codificação Front-End: Desenvolvendo a home e o login de um site* 
